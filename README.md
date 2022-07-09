@@ -1,7 +1,7 @@
 # :star2: Data Mining :star2: #
 ## :ambulance: Mining the Diabetes Mellitus Database :ambulance: ##
 
-### :one: Summary of features ###
+## :one: Summary of features ##
 
 First, I load the dataset into JupyterNotebook environment and examine its first 5
 rows:
@@ -22,7 +22,7 @@ In terms of gender, male patients are dominant with almost 43 thousand observati
 
 There are 2 data types associated with numerical data: "float64" and "int64". Hence, all columns in those 2 types will be listed in numerical data. As there are 84 numerical variables in the dataset, the output is not presented here to save space. It is clear that several numerical columns like d1_albumin_max, d1_bilirubin_max have large amount of missing values (43-46 thousands).
 
-### :two: Data pre-processing ###
+## :two: Data pre-processing ##
 
 ### Missing values ###
 
@@ -114,7 +114,7 @@ After approximating the percentages of outliers in the dataset, I used both Isol
 
 Based on the result, I discarded all outliers to produce the final dataset, with 72869 rows and 50 features.
 
-### :three: Supervised model training and evaluation ###
+## :three: Supervised model training and evaluation ##
 
 ### Train-test split and re-sampling ###
 
@@ -150,7 +150,7 @@ The confusion matrix and ROC curve of SVC classifier is illustrated below:
 
 According to the metrics and visualizations, my model performs quite effectively with high recall score for the minority class i.e. people who have diabetes mellitus. However, due to the low precision score, the model misclassifies normal people to have diabetes mellitus by more than 17%. Nevertheless, this could still be considered to be a good model with a balance in the F1-score of 80%. As the cost of misclassifying normal people is lower than misclassifying sick ones, models that prioritize on predicting minority class is generally better.
 
-### :four: Unsupervised Clustering (Additional task) ###
+## :four: Unsupervised Clustering (Additional task) ##
 
 The validation dataset is used for clustering algorithms because it has not been downsampled. First, the target variable will be omitted before any clustering. Second, Principle Component Analysis (PCA) was performed to reduce data dimensions. By plotting the explained variance of each component, the optimal number of features (8) was chosen.
 
